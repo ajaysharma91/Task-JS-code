@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Attribute</title>
+</head>
+<body>
+
+	<h2>List Of Cities</h2>
+<div>
+<ul>
+	<li onclick="getDatatypeValue(this)" data_element="Madhya Pradesh">Gwalior</li>
+	<li onclick="getDatatypeValue(this)" data_element="Karnataka">Bangalore</li>
+	<li onclick="getDatatypeValue(this)" data_element="U.P.">Noida</li>
+	<li onclick="getDatatypeValue(this)" data_element="Rajsthan">Jaipur</li>
+</ul>
+
+</div>
+ 
+ <script type="text/javascript">
+ 	function getDatatypeValue(city)
+ 	{
+ 		var stateName = city.getAttribute("data_element");
+ 		alert("this city "+city.innerHTML+" belongs to "+stateName);
+ 	}
+
+ </script>
+</body>
+</html>

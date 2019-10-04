@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	class Queue{
+
+		constructor()
+		{
+			this.items = [];
+		}
+
+		enQueue(value){
+			this.items.push(value);
+		}
+
+		deQueue(){
+			if(this.isEmpty()){
+				console.log("Queue is Underflow!!");
+			}
+			else{
+				console.log("Value is deleted successfully");
+				return this.items.shift();
+			}
+		}
+
+		isEmpty()
+		{
+			if(this.items.length == 0) return true;
+		}
+		front()
+		{
+			return this.items[0];
+		}
+
+		rear()
+		{
+			return this.items[this.items.length-1];
+		}
+
+		printValue()
+		{
+			var str="";
+			for (var i = 0; i < this.items.length; i++) {
+				str += this.items[i]+" ";
+			}
+
+			return str;
+		}
+	}
+
+
+	let queue = new Queue();
+	queue.enQueue(3);
+	queue.enQueue(5);
+	queue.enQueue(1);
+	queue.enQueue(18);
+	queue.enQueue(9);
+
+    console.log("ALl Value:"+queue.printValue());
+	console.log("Rear Value:"+queue.rear());
+	console.log("Front Value:"+queue.front());
+	console.log("Deleted Value:"+queue.deQueue());
+	console.log("ALl Value:"+queue.printValue());
+	console.log("Front Value:"+queue.front());
+
+	queue.enQueue(67);
+	console.log("Rear Value:"+queue.rear());
+
+</script>
+</body>
+</html>

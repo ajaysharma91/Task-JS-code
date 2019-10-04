@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enable or Disable Checkbox on DropDown Selection - JavaScript</title>
+    <style>
+        body, select {
+            font:14px Verdana;
+        }
+    </style>
+</head>
+<body>
+   <select id="mySelect" name="val" size="1" onchange="fun(this)" >
+    <option value="" selected="">select</option>
+<option value="A">Apple</option>
+<option value="C">Cars</option>
+<option value="H">Honda</option>
+<option value="F">Fiat</option>
+<option value="I">Indigo</option>                    
+</select>
+</body>
+
+<script>
+
+  function fun(element){
+   var selectobject = document.getElementById("mySelect");
+  
+for (var i=1; i<selectobject.length; i++) {
+  
+    if (selectobject.options[i].value == element.value)
+    //selectobject.remove(i);
+      selectobject.options[i].disabled=true;
+      else
+       selectobject.options[i].disabled=false;
+}
+}
+</script>
+</html>

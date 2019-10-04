@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+var lval ="this is globle";
+
+function local(){
+	 let lval="This is local value";
+	 console.log(window.lval);
+}
+local();
+//console.log(lval);
+
+function fun(){ 
+    if(true){ 
+        let i = 100; 
+    } 
+    console.log(i); // i is not defined 
+} 
+fun(); 
+
+</script>
+</body>
+</html>

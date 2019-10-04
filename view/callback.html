@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>callback</title>
+</head>
+<body>
+<script type="text/javascript">
+  function first(str)
+  {
+  	alert(str);
+  }
+
+  function second(callback){
+  	var s = window.prompt("Enter The Message ");
+  	callback(s);
+  }
+
+  second(first);
+</script>
+</body>
+</html>

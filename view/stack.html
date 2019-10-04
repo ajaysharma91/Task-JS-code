@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+
+	class Stack
+{
+
+     constructor()
+     {
+     	this.item = [];
+     }
+
+     push(element)
+     {
+     	this.item.push(element);
+     }
+
+     pop()
+     {
+     	if(this.isEmpty())
+     	{
+     		document.write("stack is underflow!!!");
+     	}
+     	else
+     	{
+     		return this.item.pop();
+     	}
+     }
+
+     peek(){
+
+     		return this.item[this.item.length-1];	
+     }
+     isEmpty()
+     {
+     	if (this.item.length==0) {
+     		return true;
+     	}
+     }
+printValue()
+{
+	var str="";
+	for (var i = 0; i <this.item.length ; i++) {
+		str += this.item[i]+ " ";
+	}
+	return str;
+}
+
+}
+
+
+ 
+
+
+let stack = new Stack();
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+    stack.push(4);
+
+    document.write(stack.printValue());
+
+    console.log(stack.pop());
+    console.log(stack.peek());
+</script>
+</body>
+</html>
