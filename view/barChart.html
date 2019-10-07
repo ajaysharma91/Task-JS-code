@@ -1,53 +1,42 @@
 <!DOCTYPE HTML>
 <html>
-<head>  
-<script>
-window.onload = function () {
-	
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	 zoomEnabled:true,
-	
-	title:{
-		text:"No Of States Y By Countries",
-		 fontColor: "orange",
-	},
-	axisX:{
-		interval: 1
-	},
-	axisY2:{
-		interlacedColor: "black",
-		gridColor: "orange",
-		title: "Number of States",
-		 titleFontColor: "red"
+<head>
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
 
+      axisX:{
+       title: "axisX Title",
+       gridThickness: 1,
+       tickLength: 10
+      },
 
-	},
-	data: [{
-		type: "bar",
-		name: "States",
-		axisYType: "secondary",
-		color: "pink",
-		dataPoints: [
-			{ y: 10, label: "Sweden", color:"orange" },
-			{ y: 20, label: "Taiwan" , color:"white" },
-			{ y: 12, label: "Russia" , color:"grey" },
-			{ y: 30, label: "Spain"  , color:"sky"},
-			{ y: 17, label: "Brazil" , color:"pink" },
-			{ y: 31, label: "India"  , color:"blue"},
-			{ y: 35, label: "Italy" , color:"yellow"},
-			{ y: 40, label: "Australia" , color:"red" },
-			
-		]
-	}]
-});
-chart.render();
+      data: [
+      {
+        type: "column",
+        dataPoints: [
+        { x: 10, y: 71 },
+        { x: 20, y: 55},
+        { x: 30, y: 50 },
+        { x: 40, y: 65 },
+        { x: 50, y: 95 },
+        { x: 60, y: 68 },
+        { x: 70, y: 28 },
+        { x: 80, y: 34 },
+        { x: 90, y: 14}
+        ]
+      }
+      ]
+    });
 
-}
-</script>
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>
 <body>
-<div id="chartContainer" style="height: 300px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
 </body>
 </html>
